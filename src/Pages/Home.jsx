@@ -28,7 +28,7 @@ const Home = () => {
                     <span className='text-[20px] ubuntu-sans-mono'>Wallet</span>
                 </div>
               
-            </div>
+            </div> 
 
             <div className='flex justify-between items-center w-[300px]'>
                 <div>
@@ -42,7 +42,7 @@ const Home = () => {
         </div>
         <div className='flex flex-col justify-center items-center w-[83%] h-[90%] overflow-y-scroll overflow-hidden rounded-[15px] border-[0.1px] border-[#2685f972] mt-[85px] mb-[55px]'>
                 <div>
-                    <TopMenu />
+                    {/* <TopMenu /> */}
                 </div>
                     <div className='flex flex-col justify-center items-center w-full h-full  mt-[-152px] bg-[white]'>
                             <div className='flex justify-center items-center'>
