@@ -4,6 +4,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poetsen+One&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poetsen+One&family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poetsen+One&family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poetsen+One&family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Jost:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poetsen+One&family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -16,10 +18,18 @@
 }
 
 body{
-  font-family: "Lato", sans-serif;
+  /* background: url(/images/background.jpeg); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(43, 42, 42, 0.885);
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 19px;
   font-weight: 400;
   font-style: normal;
 }
+
+/* #0E0E0E */
 
 /* fonts*/
 .poetsen-one-regular {
@@ -36,9 +46,17 @@ body{
   font-style: normal;
 }
 
-/* fonts*/
-
-.filter-Blur {
-  background-color: blueviolet;
-  backdrop-filter: blur(20px);
+.abel-regular {
+  font-family: "Abel", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
+
+.jost {
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* fonts*/

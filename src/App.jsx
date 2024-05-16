@@ -14,9 +14,10 @@ function App() {
     <>
   
          <BrowserRouter>
-            <div className='flex w-screen h-screen'>
-
-                        <div className='mt-0 h-screen'>
+            <div className='flex md:justify-center container h-screen '>
+            
+                        <div className=' mt-0 h-screen '>
+                       
                             <Routes>
                                 <Route path='/' element={<Home />} />
                             

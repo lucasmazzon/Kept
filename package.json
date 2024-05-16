@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --port 3000",
+    "publish": "rsync -rav -e 'ssh' /Users/testuser/Desktop/LockyFi/dist/* levelspaces@137.184.179.163:/www/wwwroot/pay.lockyfi.com",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"

@@ -1,34 +1,59 @@
-import React, {useContext} from 'react'
-import { translation } from '../../public/translation'
-import { Context } from '../Context/Context'
+import React from 'react'
+import ModernInnovative from '../components/ModernInnovative'
+import ExtremeSecurity from '../components/ExtremeSecurity'
+import ExtraBooster from '../components/ExtraBooster'
+import SmootherExperience from '../components/SmootherExperience'
 
 
+
+
+
+const Icon = ({name, icon, shadow, text}) => {
+    return(
+        <>
+            <div className='flex flex-col justify-center items-center'>
+                <div className='flex justify-center items-center w-[65px] h-[65px] mt-[40px] bg-[#8DBC4E] rounded-full'>
+                    <div className='flex justify-center items-center w-[35px] h-[35px]'>{icon}</div>
+                </div>
+                            <div>{shadow}</div>
+                        <div className='text-center text-[white] text-[17px]'>{name}</div>
+                    <div className='max-w-[300px] md:w-[200px] text-[15px] text-center text-[white] mt-[20px]'>{text}</div>
+            </div>
+        </>
+    )
+}
 
 const LandingPageBottom = () => {
-    const { selectedLanguage} = useContext(Context);
+
+    const baseIcons = [
+        {name: 'SMOOTHER EXPERIENCE', icon: <img src='/images/logo/bottomIcon1.png'/>, shadow: <img className='w-[110px]' src='/images/logo/shadowBottom.png'/>, text:<SmootherExperience />},
+        {name: 'EXTREME SECURITY', icon: <img src='/images/logo/bottomIcon2.png'/>, shadow: <img className='w-[110px]' src='/images/logo/shadowBottom.png'/>, text: <ExtremeSecurity />},
+        {name: 'EXTRA BOOSTER', icon: <img className='w-[25px] h-[35px]' src='/images/logo/bottomIcon3.png'/>, shadow: <img className='w-[110px]' src='/images/logo/shadowBottom.png'/>, text: <ExtraBooster />},
+        {name: 'MODERN & INNOVATIVE', icon: <img src='/images/logo/bottomIcon4.png'/>, shadow: <img className='w-[110px]' src='/images/logo/shadowBottom.png'/>, text: <ModernInnovative />},
+    ];
 
   return (
-    <div className='flex flex-col w-[83%] pt-[20px] bg-[#a9a9a925]'>
-    <div className='flex justify-center items-center text-[27px] ml-[20px] font-serif text-[#D2B569] text-center md:text-left'>
-    {selectedLanguage === 'En' ? translation[0].en[7].content : translation[1].pt[7].content}
+    <div className='grid grid-col justify-center items-center  w-full pt-[50px]' >
+            <div className='grid grid-col md:grid-cols-2 lg:grid-cols-4 justify-center gap-4 '>
+                {baseIcons.map((i, index) => {
+                    return(
+                        <div key={index}><Icon {...i}/></div>
+                    )
+                })}
+            </div>
+
+            <div className='flex flex-col md:flex-row justify-between items-center  gap-6 w-[450px] pb-[30px] mt-[50px]'>
+                <div>
+                    <img className=' w-[130px] h-[50px] pr-[-100px]' src='/images/logo/lockyPayBottom.png'/>    
+                </div>
+                        <div>
+                            <img className=' w-[100px] h-[130px]' src='/images/logo/Vector.png'/>
+                        </div>
+                <div>
+                    <img className=' w-[130px] h-[30px] ' src='/images/logo/lockyFiBottom.png'/>    
+                </div>
+            </div>
     </div>
-        <div className='grid grid-cols-1 md:grid-cols-2'>
-                <div className='flex flex-col p-[15px]'>
-                    <span className='text-[20px] text-center font-bold ml-[15px] md:text-left'>                    
-                    {selectedLanguage === 'En' ? translation[0].en[8].content : translation[1].pt[8].content}
-                    </span>
-                        <p className='m-[15px] text-center md:text-left'>                    
-                        {selectedLanguage === 'En' ? translation[0].en[9].content : translation[1].pt[9].content}
-                        </p>
-                </div>
-                <div className='flex flex-col p-[15px]'>
-                    <span className='text-[20px] text-center font-bold ml-[15px] md:text-left'>                    
-                    {selectedLanguage === 'En' ? translation[0].en[10].content : translation[1].pt[10].content}
-                    </span>
-                    <p className='m-[15px] text-center md:text-left'>{selectedLanguage === 'En' ? translation[0].en[11].content : translation[1].pt[11].content}</p>
-                </div>
-        </div>
-</div>
   )
 }
 
